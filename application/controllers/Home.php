@@ -5,10 +5,6 @@
         {
             $this->load->view('home/index');
         }
-
-        public function update()
-        {
-            $this->load->view('home/update');
-        }
+        
     }
 ?>

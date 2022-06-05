@@ -24,7 +24,8 @@
           <ul class="dropdown-menu">
             <li><a href="<?php echo base_url('product');?>">Product</a></li>
             <li><a href="<?php echo base_url('product/list');?>">Product List</a></li>
-            <li><a href="<?php echo base_url('home/update');?>">Product Update</a></li>
+            <li><a href="<?php echo base_url('product/insert');?>">Insert Product</a></li>
+            <li><a href="<?php echo base_url('product/update');?>">Product Update</a></li>
           </ul>
         </li>
       </li>
@@ -37,37 +38,41 @@
     </ul>
   </div>
 </nav>
+
 </nav>
-    <table class="table">
-    <thead>
-        <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        </tr>
-        <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-        </tr>
-        <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-        </tr>
-    </tbody>
-    </table>
+
+  <table class="table table-bordered">  
+        <tbody>  
+          <tr >  
+              <td><b>id</b></td>  
+              <td><b>title</b></td>  
+              <td><b>description</b></td>  
+              <td><b>price</b></td> 
+              <td><b>quantity</b></td>
+              <td><b>image</b></td>  
+              <td><b>featured</b></td>  
+              <td><b>show/hide</b></td>  
+              <td><b>action</b></td>
+          </tr>  
+          <?php  
+          foreach ($data_onero as $dbo)  
+          {  
+              ?><tr>  
+              <td><?php echo $dbo->id_barang;?></td>  
+              <td><?php echo $dbo->title;?></td>  
+              <td><?php echo $dbo->description;?></td>  
+              <td><?php echo $dbo->price;?></td>  
+              <td><?php echo $dbo->quantity;?></td>  
+              <td><?php echo $dbo->image;?></td>  
+              <td><?php echo $dbo->featured;?></td>  
+              <td><?php echo $dbo->show;?></td> 
+              <td><a href="<?php echo base_url('product/update/'). $dbo->id_barang?>">Update</a> | 
+              <a href="<?php echo base_url('product/ActionDelete/'). $dbo->id_barang?>">Delete</a></td> 
+              </tr>  
+          <?php }  
+          ?>  
+        </tbody>  
+    </table> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>

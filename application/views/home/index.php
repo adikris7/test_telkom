@@ -34,7 +34,8 @@
           <ul class="dropdown-menu">
             <li><a href="<?php echo base_url('product');?>">Product</a></li>
             <li><a href="<?php echo base_url('product/list');?>">Product List</a></li>
-            <li><a href="<?php echo base_url('home/update');?>">Product Update</a></li>
+            <li><a href="<?php echo base_url('product/insert');?>">Insert Product</a></li>
+            <li><a href="<?php echo base_url('product/update');?>">Product Update</a></li>
           </ul>
         </li>
       </li>

@@ -29,15 +29,15 @@
     <ul class="nav navbar-nav">
       <li><a href="<?php echo base_url('home');?>">Home</a></li>
       <li class="dropdown">
-        <li class="active"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Product<span class="caret"></span></a>
+        <li><a class="dropdown-toggle" data-toggle="dropdown" href="#">Product<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="<?php echo base_url('product');?>">Product</a></li>
             <li><a href="<?php echo base_url('product/list');?>">Product List</a></li>
-            <li><a href="<?php echo base_url('home/update');?>">Product Update</a></li>
+            <li><a href="<?php echo base_url('product/update');?>">Product Update</a></li>
           </ul>
         </li>
       </li>
-      <li><a href="<?php echo base_url('cart');?>">Cart</a></li>
+      <li class="active"><a href="<?php echo base_url('cart');?>">Cart</a></li>
       
     </ul>
     <ul class="nav navbar-nav navbar-right">
